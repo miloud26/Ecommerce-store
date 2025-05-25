@@ -6,7 +6,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@formspree/react": "^2.4.1",
-    "@material-ui/private-theming": "^5.0.0-alpha.33",
+   
     "@mui/icons-material": "^5.10.16",
     "@mui/material": "^5.11.0",
     "@mui/system": "^5.11.0",
