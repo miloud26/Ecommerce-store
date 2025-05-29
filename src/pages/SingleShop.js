@@ -18,10 +18,12 @@ const SingleShop = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const singleProduct = product.filter((item) => item.id === id);
+  const singleProduct = product.filter((item) => item.id.toString() === id);
+
   if (loading) {
     return <div>not found</div>;
   }
+
   if (!singleProduct.length) {
     return <div>loading...</div>;
   }

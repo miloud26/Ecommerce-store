@@ -43,7 +43,7 @@ const ProductClient = () => {
     getSingleProduct(id);
   }, []); */
 
-  const singleProduct = product.filter((item) => item.id === id);
+  const singleProduct = product.filter((item) => item.id.toString() === id);
 
   if (loading) {
     return <div>not found</div>;
