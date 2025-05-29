@@ -1,4 +1,3 @@
-import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -17,9 +16,6 @@ const SwiperH = () => {
 
         "@media(max-width:1500px)": {
           padding: "0 120px",
-        },
-        "@media(max-width:1500px)": {
-          padding: "0 20px",
         },
       }}
     >

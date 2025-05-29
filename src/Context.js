@@ -270,6 +270,8 @@ const ProductProvider = ({ children }) => {
         setCart,
         refrechCart,
         setRefrachCart,
+        setLoading,
+        setCoupons,
       }}
     >
       {children}

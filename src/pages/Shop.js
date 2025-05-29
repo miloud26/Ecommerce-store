@@ -16,12 +16,12 @@ import { useGlobalContext } from "../Context";
 import SingleProduct from "../components/single/singleProduct/SingleProduct";
 const Shop = () => {
   document.getElementsByTagName("title")[0].textContent = `Miloudb | Shop`;
-  const { category, product, setProduct, refrech, setRefrech } =
-    useGlobalContext();
+  const { category, product, setProduct } = useGlobalContext();
   const [categorySelected, setCategorySelected] = useState("");
   const [page, setPage] = useState(1);
   const [showFilter, setShowFilter] = useState(false);
   const [termSearch, setTermSearch] = useState("");
+  console.log(termSearch);
   const handleCategory = (name) => {
     setCategorySelected(name);
   };
@@ -214,7 +214,10 @@ const Shop = () => {
                         }}
                       >
                         (
-                        {product.filter((item) => item.category == name).length}
+                        {
+                          product.filter((item) => item.category === name)
+                            .length
+                        }
                         )
                       </div>
                     </Box>

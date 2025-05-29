@@ -6,7 +6,7 @@ const ProductCart = ({ id, url, title, price }) => {
 
   const deletFromLocalStorage = (id) => {
     const tempCart = JSON.parse(localStorage.getItem("cart")).filter(
-      (item) => item.id != id
+      (item) => item.id !== id
     );
     localStorage.setItem("cart", JSON.stringify(tempCart));
     setRefrachCart(!refrechCart);
@@ -51,7 +51,6 @@ const ProductCart = ({ id, url, title, price }) => {
           <Button
             onClick={() => deletFromLocalStorage(id)}
             sx={{
-              padding: "0",
               background: "#e26414",
               color: "white",
               padding: "2px 12px",

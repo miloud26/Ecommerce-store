@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Box, Button, Divider, Rating, Typography, Modal } from "@mui/material";
 import { Link, useParams } from "react-router-dom";
 import { useGlobalContext } from "../Context";
@@ -11,18 +11,14 @@ import {
 import SingleProduct from "../components/single/singleProduct/SingleProduct";
 import ProductTabs from "../Ttabs";
 const SingleShop = () => {
-  const { getSingleProduct, loading, product, setRefrachCart, refrechCart } =
-    useGlobalContext();
+  const { loading, product, setRefrachCart, refrechCart } = useGlobalContext();
   const { id } = useParams();
-  /*
-  useEffect(() => {
-    getSingleProduct(id);
-  }, []); */
+
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const singleProduct = product.filter((item) => item.id == id);
+  const singleProduct = product.filter((item) => item.id === id);
   if (loading) {
     return <div>not found</div>;
   }
@@ -131,7 +127,7 @@ const SingleShop = () => {
           <Typography
             sx={{
               width: "100%",
-              marginTop: "5px",
+
               fontSize: "23px",
               marginLeft: "15px",
               marginTop: "15px",
@@ -143,7 +139,7 @@ const SingleShop = () => {
           <Typography
             sx={{
               width: "100%",
-              marginTop: "5px",
+
               fontSize: "17px",
               marginLeft: "15px",
               marginTop: "15px",
@@ -268,9 +264,6 @@ const SingleShop = () => {
           sx={{
             "@media(max-width:1500px)": {
               padding: "20px 84px 50px 84px",
-            },
-            "@media(max-width:1500px)": {
-              padding: "20px 30px 50px 30px",
             },
           }}
         >

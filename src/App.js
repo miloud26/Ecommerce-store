@@ -1,6 +1,6 @@
 import React from "react";
 import { useGlobalContext } from "./Context";
-import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./components/global/Footer";
 import Navbar from "./components/global/Navbar";
 import Home from "./pages/Home";

@@ -9,7 +9,7 @@ import {
   Divider,
   TextField,
 } from "@mui/material";
-import { useGlobalContext } from "./Context";
+
 import { useState } from "react";
 function TabPanel(props) {
   const { children, value, index } = props;
@@ -44,7 +44,7 @@ function a11yProps(index) {
 
 const ProductTabs = () => {
   const [value, setValue] = React.useState(0);
-  const { singleProduct } = useGlobalContext();
+
   const [showAddRev, setShowAddRev] = useState(false);
 
   const handleChange = (event, newValue) => {

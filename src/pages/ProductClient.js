@@ -8,7 +8,7 @@ import {
   Modal,
 } from "@mui/material";
 import moment from "moment/moment";
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import {
   AiFillFacebook,
@@ -34,7 +34,7 @@ const ProductClient = () => {
   const [coupon, setCoupon] = useState("");
   const [orderSuccus, setOrderSuccus] = useState(false);
 
-  const { loading, getSingleProduct, coupons, product } = useGlobalContext();
+  const { loading, coupons, product } = useGlobalContext();
   const couponSelected = coupons.filter(
     (item) => parseInt(item.ProductId) === parseInt(id)
   );
@@ -43,7 +43,7 @@ const ProductClient = () => {
     getSingleProduct(id);
   }, []); */
 
-  const singleProduct = product.filter((item) => item.id == id);
+  const singleProduct = product.filter((item) => item.id === id);
 
   if (loading) {
     return <div>not found</div>;
@@ -191,7 +191,7 @@ const ProductClient = () => {
           <Typography
             sx={{
               width: "100%",
-              marginTop: "5px",
+
               fontSize: "23px",
               marginLeft: "15px",
               marginTop: "15px",
@@ -203,7 +203,7 @@ const ProductClient = () => {
           <Typography
             sx={{
               width: "100%",
-              marginTop: "5px",
+
               fontSize: "17px",
               marginLeft: "15px",
               marginTop: "15px",
@@ -215,7 +215,7 @@ const ProductClient = () => {
           <Typography
             sx={{
               width: "100%",
-              marginTop: "5px",
+
               fontSize: "17px",
               marginLeft: "15px",
               marginTop: "15px",

@@ -101,9 +101,6 @@ const Home = () => {
           "@media(max-width:1500px)": {
             padding: "20px 84px 50px 84px",
           },
-          "@media(max-width:1500px)": {
-            padding: "20px 30px 50px 30px",
-          },
         }}
       >
         <Box>
@@ -142,9 +139,6 @@ const Home = () => {
           "@media(max-width:1500px)": {
             padding: "20px 84px 50px 84px",
           },
-          "@media(max-width:1500px)": {
-            padding: "20px 30px 50px 30px",
-          },
         }}
       >
         <Box>
@@ -182,9 +176,6 @@ const Home = () => {
         sx={{
           "@media(max-width:1500px)": {
             padding: "20px 84px 50px 84px",
-          },
-          "@media(max-width:1500px)": {
-            padding: "20px 30px 50px 30px",
           },
         }}
       >
@@ -487,7 +478,7 @@ const Home = () => {
                 width: "100%",
                 display: "flex",
                 justifyContent: "center",
-                width: "100%",
+
                 alignItems: "center",
               }}
               onSubmit={(e) => {
